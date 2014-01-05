@@ -1,0 +1,1 @@
+python baseline.py 33 10
