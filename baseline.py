@@ -3,15 +3,20 @@
 import sys
 
 process_percent = sys.argv[1]
-topnum = sys.argv[2]
+topnum = int(sys.argv[2])
 
 ## log
 print 'percent : ' + process_percent
-print 'width : ' + topnum
+print 'width : ' + str(topnum)
 
 train_file_path = 'corpus/src-' + process_percent + 'percent/train-word.txt'
-test_file_path = 'corpus/src-' + process_percent + 'percent/test-word-count.txt'
-out_file_path = 'out/baseline_result_' + process_percent + 'per_' + topnum + 'width.txt'
+test_file_path = 'corpus/src-' + process_percent + 'percent/word-map.txt'
+out_file_path = 'out/baseline_result_' + process_percent + 'per_' + str(topnum) + 'width.txt'
+
+## log 
+print 'train path ', train_file_path
+print 'test path ', test_file_path
+print 'out path ', out_file_path
 
 ftrainwords = open(train_file_path, 'r')
 ftestwords = open(test_file_path, 'r')
